@@ -1,2 +1,2 @@
 # MLOps-Practical-Exam
-Wine Classification using MLOps
+Hand written Digit Classification using MLOps
