@@ -1,0 +1,22 @@
+
+stages:
+  create_data:
+    cmd: python src/create_data.py
+    deps:
+      - src/create_data.py
+    outs:
+      - data/raw/digits.csv
+
+  preprocess:
+    cmd: python src/preprocess.py
+    deps:
+      - src/preprocess.py
+      - data/raw/digits.csv
+    outs:
+      - data/processed/digits_processed.csv
+
+  validate:
+    cmd: python src/validate.py
+    deps:
+      - src/validate.py
+      - data/processed/digits_processed.csv
